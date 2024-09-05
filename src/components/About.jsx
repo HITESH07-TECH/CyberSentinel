@@ -13,11 +13,16 @@ export default function About() {
 				</div>
 				<div className='gap-y-10 text-sm md:text-base'>
 					<p className='mb-5'>
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                    At *CyberSentinel*, we are dedicated to ensuring the continuous availability and security of cloud-hosted web applications by providing cutting-edge protection against Distributed Denial-of-Service (DDoS) attacks. As businesses increasingly rely on cloud infrastructure, the risk of devastating downtime caused by malicious DDoS attacks has grown. Our mission is to deliver a robust, intelligent, and automated DDoS protection solution that keeps your services running smoothly and securely.
+
+*CyberSentinel* is designed to automatically detect, mitigate, and recover from DDoS attacks in real-time. Leveraging advanced machine learning algorithms for anomaly detection, our system identifies unusual traffic patterns that could signal a potential attack. Once detected, the system instantly activates mitigation tools like rate limiting, IP blocking, and traffic filtering to neutralize threats before they can cause harm.
 					</p>
 					<p className='mb-5'>
-                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+					Our solution is easy to deploy on any NGINX server, with a user-friendly setup process and automated operation, making it accessible to businesses of all sizes. Whether you're a small startup or a large enterprise, *CyberSentinel* scales effortlessly to meet your needs, ensuring that your digital assets remain protected at all times.
+
+With our commitment to innovation and security, *CyberSentinel* continues to evolve, incorporating new technologies like machine learning and geolocation verification, offering enhanced protection against even the most sophisticated attacks.
 					</p>
+					<p className='text-center text-xl font-bold pb-5'>Stay secure. Stay online. Let CyberSentinel safeguard your cloud infrastructure.</p>
 				</div>
 			</div>
 			<Working/>

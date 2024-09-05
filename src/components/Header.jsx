@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 const Header = () => (
-    <div className='w-full bg-black fixed top-0 left-0 z-50'>
+    <div id="home" className='w-full bg-black fixed top-0 left-0 z-50'>
     <div></div>
     
     <nav className='w-10/12 flex items-center justify-between bg-black py-6 mx-auto'>
@@ -12,8 +12,7 @@ const Header = () => (
             <li className=''><a href="#home">Home</a></li>
             <li className=''><a href="#about">About</a></li>
             <li className=''><a href="#features">Features</a></li>
-            <li className=''><a href="#products">Products</a></li>
-            <li className=''><a href="#contact">Contact</a></li>
+            <li className=''><a href="#contact">Team</a></li>
         </ul>
     </nav>
     

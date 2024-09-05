@@ -22,8 +22,11 @@ function GetStarted() {
   return (
     <div className="get-started bg-[url('/bg.jpg')] bg-fixed bg-cover relative bg-center bg-opacity-25 w-full">
       <div className="form-container">
-        <img src="logo.jpg" alt="CyberSentinel" className="logo" />
-        <h1>14-Day FREE Trial</h1>
+      <div className="flex items-center space-x-4 mb-4">
+      <img src="logo.jpg" alt="CyberSentinel" className="logo w-10 h-10 rounded-full" />
+          <h1 className="text-2xl font-bold">CyberSentinel</h1>
+        </div>
+        <h2>14-Day FREE Trial</h2>
         <p>You're just 5 minutes away from a faster website.</p>
         <form onSubmit={handleSubmit}>
           <div className="input-group">
