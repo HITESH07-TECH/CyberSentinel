@@ -6,9 +6,9 @@ import Working from './Working';
 export default function About() {
 	return (
         <>
-		<div className='w-full bg-black py-10'>
+		<div className='w-full bg-black py-10 pb-10'>
 			<div className='w-10/12 mx-auto text-white'>
-			<div id="about" className='capitalize font-white text-5xl md:text-6xl inline-block text-center mb-10'>
+			<div id="about" className='capitalize font-white text-5xl md:text-6xl inline-block text-center mb-10 neon-green'>
 					About
 				</div>
 				<div className='gap-y-10 text-sm md:text-base'>
@@ -20,8 +20,9 @@ export default function About() {
 					</p>
 				</div>
 			</div>
+			<Working/>
 		</div>
-        <Working/>
+        
         </>
 	);
 }

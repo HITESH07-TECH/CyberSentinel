@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoogle, faApple, faGitlab } from '@fortawesome/free-brands-svg-icons';
+
 //import './GetStarted.css'; // Import the CSS for styling
 
 function GetStarted() {
@@ -17,9 +20,9 @@ function GetStarted() {
   };
 
   return (
-    <div className="get-started">
+    <div className="get-started bg-[url('/bg.jpg')] bg-fixed bg-cover relative bg-center bg-opacity-25 w-full">
       <div className="form-container">
-        <img src="logo.png" alt="CyberSentinel" className="logo" />
+        <img src="logo.jpg" alt="CyberSentinel" className="logo" />
         <h1>14-Day FREE Trial</h1>
         <p>You're just 5 minutes away from a faster website.</p>
         <form onSubmit={handleSubmit}>
@@ -59,9 +62,9 @@ function GetStarted() {
         <div className="alternative-login">
           <p>Or continue with</p>
           <div className="login-options">
-            <button className="google">Google</button>
-            <button className="gitlab">GitLab</button>
-            <button className="other">Other</button>
+            <button className="google"><FontAwesomeIcon icon={faGoogle} /> Google</button>
+            <button className="gitlab"> <FontAwesomeIcon icon={faApple} /> Apple</button>
+            <button className="other"><FontAwesomeIcon icon={faGitlab} /> GitLab</button>
           </div>
         </div>
       </div>
