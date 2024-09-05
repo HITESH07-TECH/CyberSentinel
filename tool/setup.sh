@@ -18,6 +18,7 @@ sudo iptables -A INPUT -p tcp --dport 80 -m connlimit --connlimit-above 20 -j DR
 sudo iptables-save > /etc/iptables/rules.v4
 
 # 2. Basic WAF using ModSecurity (Assumes ModSecurity is installed with Nginx)
+sudo touch /etc/blocked_ips.txt
 sudo chmod +777 /etc/blocked_ips.txt
 # Enable ModSecurity in Nginx
 echo "
@@ -39,15 +40,12 @@ server {
 }" > /etc/nginx/sites-available/default
 
 # Reload Nginx to apply changes
-#nginx -s reload
-
-# 3
-# Reload Nginx
 sudo nginx -s reload
 
 pip3 install psutil --break-system-packages
 
 sudo wget https://raw.githubusercontent.com/HITESH07-TECH/CyberSentinel/main/tool/ddos_protect.py -O /opt/ddos_protect.py
+sudo chmod +777 /opt/ddos_protect.py
 echo "
 [Unit]
 Description=DDoS Protection Script
