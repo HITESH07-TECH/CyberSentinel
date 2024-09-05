@@ -41,18 +41,39 @@ server {
 # Reload Nginx to apply changes
 #nginx -s reload
 
-# 3. Reverse Proxy and Caching with Nginx
-
+# 3
 # Reload Nginx
 sudo nginx -s reload
 
-# 4. Traffic Anomaly Detection with Python
-
-# Install required Python packages
 pip3 install psutil --break-system-packages
 
-# Set up a cron job to run the anomaly detection script every minute
-(crontab -l ; echo "* * * * * python3 /home/ghostgamer/Desktop/ddos\ protection\ tool/tool.py") | crontab -
+sudo wget https://raw.githubusercontent.com/HITESH07-TECH/CyberSentinel/main/tool/tool.py -O /opt/tool.py
+echo "
+[Unit]
+Description=DDoS Protection Script
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/ddos_protect.py
+Restart=always
+User=root
+WorkingDirectory=/opt
+StandardOutput=inherit
+StandardError=inherit
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+" > /etc/systemd/system/ddos_protect.service
+
+sudo systemctl daemon-reload
+sudo systemctl enable ddos_protect.service
+sudo systemctl start ddos_protect.service
+
+
+
+# Install required Python packages
+
 
 echo "DDoS protection setup complete."
 
