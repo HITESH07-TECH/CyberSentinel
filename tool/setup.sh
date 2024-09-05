@@ -47,7 +47,7 @@ sudo nginx -s reload
 
 pip3 install psutil --break-system-packages
 
-sudo wget https://raw.githubusercontent.com/HITESH07-TECH/CyberSentinel/main/tool/tool.py -O /opt/tool.py
+sudo wget https://raw.githubusercontent.com/HITESH07-TECH/CyberSentinel/main/tool/ddos_protect.py -O /opt/ddos_protect.py
 echo "
 [Unit]
 Description=DDoS Protection Script
