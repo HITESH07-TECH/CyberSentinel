@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dashboard.css">
+  <title>CyberSentinels DDoS Dashboard</title>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>CyberSentinels</h2>
+    <ul>
+      <li><a href="dashboard.html">Overview</a></li>
+      <li><a href="analytics.html" class="active">Analytics</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div class="header">
+      <h1>DDoS Protection Dashboard</h1>
+      <div class="profile">
+        <span>CyberSentinels</span>
+        <img src="logo.jpg" alt="Profile Picture">
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card" id="total-requests">
+        <h3>Total Requests</h3>
+        <p>18,450</p>
+        <div class="card-content">
+          <p>Total requests represent the number of incoming requests to the server. This helps analyze traffic trends and identify unusual spikes.</p>
+        </div>
+      </div>
+
+      <div class="card" id="blocked-ips">
+        <h3>Blocked IPs</h3>
+        <p>1,245</p>
+        <div class="card-content">
+          <p>Blocked IPs indicate the number of IP addresses blacklisted by the system, protecting against malicious traffic.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
