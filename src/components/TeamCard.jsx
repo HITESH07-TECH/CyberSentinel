@@ -9,24 +9,24 @@ const FCard = ({ image, title, description }) => {
 
   return (
     <div 
-      className={`relative w-64 h-80 cursor-pointer transform transition-transform duration-500 ${
+      className={`relative w-64 h-80 cursor-pointer transform transition-transform duration-500 hover:shadow-[0_0_20px_10px_rgba(255,255,255,0.5)] ${
         isFlipped ? 'rotate-y-180' : ''
       }`}
       onClick={handleFlip}
     >
       {/* Front Side */}
       <div
-        className={`absolute w-full h-full bg-white shadow-lg rounded-lg p-4 flex flex-col justify-center items-center backface-hidden transform ${
+        className={`absolute w-60 h-60 bg-black shadow-lg rounded-3xl mt-8 p-4 flex flex-col justify-center items-center backface-hidden transform ${
           isFlipped ? 'rotate-y-180' : ''
         }`}
       >
-        <img src={image} alt={title} className="w-32 h-32 mb-4 rounded-full" />
-        <h3 className="text-xl font-bold">{title}</h3>
+        <img src={image} alt={title} className="w-50 h-50 rounded-2xl mb-8" />
+        <h3 className="text-xl font-bold text-white">{title}</h3>
       </div>
 
       {/* Back Side */}
       <div
-        className={`absolute w-full h-full bg-gray-200 shadow-lg rounded-lg p-4 flex justify-center items-center text-center backface-hidden transform rotate-y-180 ${
+        className={`absolute w-full h-full bg-gray-500 shadow-lg rounded-3xl p-4 flex justify-center items-center text-center  text-white backface-hidden transform rotate-y-180 ${
           isFlipped ? 'rotate-y-0' : 'rotate-y-180'
         }`}
       >

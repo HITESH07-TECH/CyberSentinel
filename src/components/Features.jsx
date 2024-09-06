@@ -17,7 +17,7 @@ export default function Theme() {
 	];
 
 	return (
-		<div className="bg-[url('/bg.jpg')] bg-fixed bg-cover relative bg-center bg-opacity-25 w-full mb-20">
+		<div className="bg-[url('/bg.jpg')] bg-fixed bg-cover relative bg-center bg-opacity-25 w-full">
         <div id="features" className='abosule inset-0 bg-gradient-to-r from-[rgba(0,0,0,0.7)] to-[rgba(0,0,0,0.7)]'>
 			<div className='w-10/12 mx-auto'>
 				<div className='capitalize font-white  text-5xl md:text-6xl inline-block text-center mb-10'>
