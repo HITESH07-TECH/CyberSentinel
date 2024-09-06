@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="dashboard.css">
-  <title>Analytics - CyberSentinels</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+  <title>Analytics - CyberSentinels DDoS Dashboard</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -22,31 +22,28 @@
       <h1>DDoS Protection Dashboard</h1>
       <div class="profile">
         <span>CyberSentinels</span>
-        <img src="logo.jpg" alt="Profile Picture">
+        <img src="{{ url_for('static', filename='logo.jpg') }}" alt="Profile Picture">
       </div>
     </div>
 
     <div class="chart-container">
-      <canvas id="ipChart"></canvas>
+      <canvas id="requestsChart"></canvas>
     </div>
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      fetch('/data')
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('/api/requests')
         .then(response => response.json())
         .then(data => {
-          const ipLabels = data.map(entry => entry.ip);
-          const ipCounts = data.map(entry => entry.count);
-
-          const ctx = document.getElementById('ipChart').getContext('2d');
+          const ctx = document.getElementById('requestsChart').getContext('2d');
           new Chart(ctx, {
             type: 'bar',
             data: {
-              labels: ipLabels,
+              labels: Object.keys(data),
               datasets: [{
-                label: 'Number of Requests',
-                data: ipCounts,
+                label: 'Number of Requests per IP',
+                data: Object.values(data),
                 backgroundColor: 'rgba(54, 162, 235, 0.2)',
                 borderColor: 'rgba(54, 162, 235, 1)',
                 borderWidth: 1
