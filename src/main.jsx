@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 import GetStarted from './pages/GetStarted.jsx';
+import Login from './pages/Login.jsx';
 import App from './App.jsx'
 import './index.css'
 
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/GetStarted",
     element: <GetStarted/>,
+  },
+  {
+    path: "/Login",
+    element: <Login/>,
   },
 ]);
 
